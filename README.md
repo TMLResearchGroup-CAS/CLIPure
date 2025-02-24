@@ -13,7 +13,7 @@ https://github.com/ZhangMingKun1/CLIPure
 
 <br>  
 
-<img width="869" height="300" src="./figure/SCM.png">
+<img width="300" height="230" src=".zeroshot_classification.pdf">
 
 </p>
 
