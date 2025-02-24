@@ -1,0 +1,12 @@
+torch>=1.9.0
+autoattack
+robustbench
+dalle2_pytorch
+torchvision
+regex
+ftfy
+tqdm
+huggingface_hub
+sentencepiece
+protobuf
+timm
