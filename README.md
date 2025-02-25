@@ -3,7 +3,7 @@
 
 Official PyTorch implementation of the ICLR 2025 paper:<br>
 
-[CLIPure: Purification in Latent Space via CLIP for Adversarially Robust Zero-Shot Classification](https://arxiv.org/abs/2410.23091)
+[CLIPure: Purification in Latent Space via CLIP for Adversarially Robust Zero-Shot Classification](https://openreview.net/forum?id=TQ2ZOy6miT)
 
 <br>
 
@@ -70,10 +70,9 @@ purposes only. For business inquiries, please contact [zhangmingkun20z@ict.ac.cn
 Please cite our paper, if you happen to use this codebase:
 
 ```
-@article{zhang2024causaldiff,
-  title={CausalDiff: Causality-Inspired Disentanglement via Diffusion Model for Adversarial Defense},
-  author={Zhang, Mingkun and Bi, Keping and Chen, Wei and Chen, Quanrun and Guo, Jiafeng and Cheng, Xueqi},
-  journal={arXiv preprint arXiv:2410.23091},
-  year={2024}
+@inproceedings{zhangclipure,
+  title={CLIPure: Purification in Latent Space via CLIP for Adversarially Robust Zero-Shot Classification},
+  author={Zhang, Mingkun and Bi, Keping and Chen, Wei and Guo, Jiafeng and Cheng, Xueqi},
+  booktitle={The Thirteenth International Conference on Learning Representations}
 }
 ```
