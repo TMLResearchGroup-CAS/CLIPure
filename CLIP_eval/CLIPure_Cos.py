@@ -86,14 +86,12 @@ def model_dtype_half(model):
 	将特定模块中的参数转换为 FP16。
 	"""
 	for name, param in model.named_parameters():
-		# 检查模块名称是否包含指定关键字
 		if any(module_name in name for module_name in ['ln_']):
 			continue
 		if any(module_name in name for module_name in ['mlp', 'attn', 'conv1', 'visual.proj', 'text_projection', 'q_proj', 'proj.bias', 'proj']):
 		# if any(module_name in name for module_name in ['mlp', 'attn', 'conv1', 'visual.proj', 'text_projection']):
 			if param.dtype != torch.float16:
 				param.data = param.data.half()  # 转为 FP16
-				# print(f"参数 {name} 转换为 FP16")
 	return True
 
 class ClassificationModel(torch.nn.Module):
@@ -198,7 +196,7 @@ class ClassificationModel(torch.nn.Module):
 			
 			with torch.enable_grad():
 				embedding_norm_, _ = self.embed_image(vision)
-				embedding_norm_ = self.purify_zi(vision, embedding_norm_, iter=self.iter, step_size=self.step_size)
+				embedding_norm_ = self.purify_zi(embedding_norm_, iter=self.iter, step_size=self.step_size)
 			logits = embedding_norm_ @ self.text_embedding.to(embedding_norm_.dtype)
 			
 			if self.logit_scale:
